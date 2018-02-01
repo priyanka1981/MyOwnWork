@@ -10,7 +10,7 @@ namespace DataStructure.LinkList
            
         }
 
-    
+        public Node(){}
    
         public Node<T> next;
         public T data;

@@ -16,9 +16,9 @@ namespace DataStructure
             linklist.Add(node2);
             Node<int> node3 = new Node<int>(3);
             linklist.Add(node3);
-            LinkListIterator(linklist);
             Node<int> node4 = new Node<int>(4);
             linklist.Add(node4);
+            linklist.Delete(node3);
 
         }
 
