@@ -1,37 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace DataStructure.LinkList
 {
-    public class Node
+    public class Node<T>
     {
-        public Node(Node node)
+        public Node(Node<T> node)
         {
            
         }
 
     
-    private int data;
-    public Node current;
-    public Node head;
-    public Node tail;
-    public Node next;
-    public Node(int _data, Node node)
+   
+        public Node<T> next;
+        public T data;
+    public Node(T _data, Node<T> node)
     {
             
         this.data = _data;
     }
 
-    public Node(int _data)
+    public Node(T _data)
     {
              
         this.data = _data;
     }
 
-    public void Add(Node node, int _data)
-    {
-        if (head != null)
-            head = node;
-        else
-            current.next = node;
-    }
+   
 }
 }

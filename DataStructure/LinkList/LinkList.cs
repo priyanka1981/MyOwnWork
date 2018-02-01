@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 namespace DataStructure.LinkList
 {
-    public class LinkList
+    public class LinkList<T>:IEnumerable<T>
     {
-        private Node head;
-        private Node tail;
-        private Node current;
+        public Node<T> head;
+        public Node<T> tail;
+       
 
         public LinkList()
         {
@@ -13,13 +15,24 @@ namespace DataStructure.LinkList
 
 
 
-        public void Add(Node node, int _data)
+        public void Add(Node<T> node)
         {
-            if (node.head != null)
+            if (head == null)
+            {
                 head = node;
+
+            }
             else
-                current.next = node;
+            {
+                tail.next = node;
+            }
+            tail = node;
         }
+
+
+       // IEnumerator<T> IEnumerable<T>.GetEnumerator()
+       
+
 
     }
 }
