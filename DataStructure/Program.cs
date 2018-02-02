@@ -42,6 +42,7 @@ namespace DataStructure
             //Console.ReadKey();
             binaryTree.Inorder(root);
             binaryTree.BFS(root);
+            binaryTree.DFS(root);
             Console.ReadKey();
         }
 
