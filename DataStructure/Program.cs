@@ -31,12 +31,18 @@ namespace DataStructure
             DataStructure.BinaryTree.Node<int> node4 = new DataStructure.BinaryTree.Node<int>(7);
             DataStructure.BinaryTree.Node<int> node5 = new DataStructure.BinaryTree.Node<int>(9);
             DataStructure.BinaryTree.Node<int> node6 = new DataStructure.BinaryTree.Node<int>(12);
+            DataStructure.BinaryTree.Node<int> node7 = new DataStructure.BinaryTree.Node<int>(13);
             binaryTree.addChild(node1);
             binaryTree.addChild(node2);
             binaryTree.addChild(node3);
             binaryTree.addChild(node4); 
             binaryTree.addChild(node5); 
             binaryTree.addChild(node6); 
+            //Console.WriteLine("The Node is existing in a binary tree" + binaryTree.Search(root,node7)); 
+            //Console.ReadKey();
+            binaryTree.Inorder(root);
+            binaryTree.BFS(root);
+            Console.ReadKey();
         }
 
        

@@ -111,5 +111,69 @@ namespace DataStructure.BinaryTree
 
             }
         }
+
+        public bool Search(Node<T> root1,Node<T> node)
+        {
+            bool ret = false;
+            if (Convert.ToInt16(node.getValue()) == Convert.ToInt16(root1.getValue()))
+            {
+                ret = true;
+                return true;
+               // break;
+            }
+            else if (root1.getLeftChild() !=null && Convert.ToInt16(node.getValue()) < Convert.ToInt16(root1.getValue()))
+            {
+                
+                return Search(root1.getLeftChild(), node);
+            }
+            else if(root1.getRightChild() !=null)
+            {
+                return Search(root1.getRightChild(), node);
+            }
+            return ret;
+        }
+
+        public void Inorder(Node<T> node){
+            //left,root,right
+            if (node == null) return;
+            Console.WriteLine(node.getValue());
+            Inorder(node.getLeftChild());
+            Inorder(node.getRightChild());
+            return;
+        }
+
+        public void DFS()
+        {
+            
+        }
+
+        public void BFS(Node<T> node){
+            Queue<Node<T>> queue = new Queue<Node<T>>();
+            queue.Enqueue(node);
+            while(queue.Count>0){
+              
+                node = queue.Dequeue();
+                Console.WriteLine(node.getValue());
+                if (node.getLeftChild() != null)
+                    queue.Enqueue(node.getLeftChild());
+                if (node.getRightChild() != null)
+                    queue.Enqueue(node.getRightChild());
+            }
+        }
+
+        public void DFS(Node<T> node){
+            Stack<Node<T>> stack = new Stack<Node<T>>();
+            stack.Push(node);
+            Console.WriteLine("ddept first search by stack");
+            while(stack.Count>0){
+                node = stack.Pop();
+                Console.WriteLine(node.getValue());
+                if (node.getLeftChild() != null)
+                    stack.Push(node.getLeftChild());
+                if (node.getRightChild() != null)
+                    stack.Push(node.getRightChild());
+            }
+        }
+
     }
 }
