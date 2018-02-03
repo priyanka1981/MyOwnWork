@@ -6,7 +6,7 @@ namespace DataStructure
 {
     class Program
     {
-        static void Main(string[] args)
+        static void MainMethod(string[] args)
         {
             // Console.WriteLine("Hello World!");
             /*Link List
