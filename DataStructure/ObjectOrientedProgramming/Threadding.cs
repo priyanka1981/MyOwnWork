@@ -34,6 +34,17 @@ namespace DataStructure.ObjectOrientedProgramming
             }
         }
 
+        static SemaphoreSlim _semaphore = new SemaphoreSlim(4); 
+        static void AccessDatabase(string name, int seconds) { 
+            Console.WriteLine($"{name} waits to access a database"); 
+            _semaphore.Wait(); 
+            Console.WriteLine($"{name} was granted an access to a database"); 
+            Thread.Sleep(TimeSpan.FromSeconds(seconds)); 
+            Console.WriteLine($"{name} is completed"); 
+            _semaphore.Release(); 
+        }
+
+
         static void TestCounter(CounterBase c) { for (int i = 0; i < 100000; i++) { c.Increment(); c.Decrement(); } }
         static void MainLock(string[] args)
         {
