@@ -9,7 +9,7 @@ namespace DataStructure.ObjectOrientedProgramming
         {
         }
 
-        static void Main(string[] args)
+        static void MainDDDeadLock(string[] args)
         {
             object lock1 = new object();
             object lock2 = new object();
@@ -32,6 +32,16 @@ namespace DataStructure.ObjectOrientedProgramming
                 Thread.Sleep(2000);
                 lock (l2);
             }
+        }
+
+
+        static void MainAgain(string[] args)
+        {
+            for (int i = 1; i <= 6; i++) { 
+                string threadName = "Thread " + i; 
+                int secondsToWait = 2 + 2 * i; 
+                var t = new Thread(() => AccessDatabase(threadName, secondsToWait)); 
+                t.Start(); }
         }
 
         static SemaphoreSlim _semaphore = new SemaphoreSlim(4); 
