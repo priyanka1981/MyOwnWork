@@ -2,9 +2,9 @@
 using System.Text;
 namespace DataStructure.ObjectOrientedProgramming
 {
-    public class Istvan
+    public class MultiplyMatrix
     {
-        public Istvan()
+        public MultiplyMatrix()
         {
            
         }
