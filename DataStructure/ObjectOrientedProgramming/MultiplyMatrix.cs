@@ -9,7 +9,7 @@ namespace DataStructure.ObjectOrientedProgramming
            
         }
 
-        static void Main(string[] args)
+        static void Main_Pra(string[] args)
         {
             int[] a = { 1,1,1};
             int[] b = { 2,2,2};

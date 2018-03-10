@@ -9,5 +9,6 @@
     <Folder Include="LinkList\" />
     <Folder Include="BinaryTree\" />
     <Folder Include="ObjectOrientedProgramming\" />
+    <Folder Include="LINQ\" />
   </ItemGroup>
 </Project>
