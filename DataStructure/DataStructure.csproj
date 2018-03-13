@@ -10,5 +10,6 @@
     <Folder Include="BinaryTree\" />
     <Folder Include="ObjectOrientedProgramming\" />
     <Folder Include="LINQ\" />
+    <Folder Include="Parallel\" />
   </ItemGroup>
 </Project>

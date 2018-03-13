@@ -5,7 +5,7 @@ namespace DataStructure.LINQ
     public class LinqTutorial
     {
 
-        static void Main(string[] args)
+        static void Main_Linq(string[] args)
         { 
           IntroLinq();
         }
