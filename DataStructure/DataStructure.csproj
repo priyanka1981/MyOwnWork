@@ -11,5 +11,11 @@
     <Folder Include="ObjectOrientedProgramming\" />
     <Folder Include="LINQ\" />
     <Folder Include="Parallel\" />
+    <Folder Include="Serialization\" />
+    <Folder Include="AmazonInterviewQuestions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
   </ItemGroup>
 </Project>
